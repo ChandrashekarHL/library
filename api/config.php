@@ -1,17 +1,28 @@
 <?php
 /**
- * config.php — Auto-detects BASE URL
- * PHP files live in /api/ but assets (css/js) are at root.
- * Strips /api from path so BASE points to the project root.
+ * config.php — Robust BASE URL detection
+ * Works on Vercel (root /) and XAMPP subdirectory (/library/)
  */
 if (!defined('BASE')) {
-    if (getenv('VERCEL') || getenv('VERCEL_ENV')) {
-        // On Vercel: assets served from root
+
+    $host       = $_SERVER['HTTP_HOST'] ?? '';
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/index.php');
+
+    // ── Vercel detection (multiple signals) ──────────────────────
+    $isVercel = !empty(getenv('VERCEL'))
+             || !empty(getenv('VERCEL_ENV'))
+             || !empty(getenv('VERCEL_URL'))
+             || strpos($host, 'vercel.app') !== false
+             || strpos($host, 'vercel-dns.com') !== false;
+
+    if ($isVercel) {
         define('BASE', '');
+
     } else {
-        // On XAMPP: auto-detect, strip /api suffix
-        $dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/'));
-        $dir = preg_replace('#/api/?$#', '', $dir);
-        define('BASE', ($dir === '/' || $dir === '') ? '' : rtrim($dir, '/'));
+        // ── Local / shared hosting: auto-detect from SCRIPT_NAME ─
+        $dir = dirname($scriptName);                      // e.g. /library/api
+        $dir = preg_replace('#/api/?$#', '', $dir);       // strip trailing /api
+        $dir = rtrim($dir, '/');
+        define('BASE', ($dir === '' || $dir === '.') ? '' : $dir);
     }
 }
