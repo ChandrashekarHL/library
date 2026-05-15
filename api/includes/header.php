@@ -12,7 +12,6 @@ if (!isset($pageClass))       $pageClass       = '';
 if (!isset($activePage))      $activePage      = '';
 ?>
 <!DOCTYPE html>
-<!-- DEBUG BASE='<?= BASE ?>' | DOCROOT='<?= $_SERVER['DOCUMENT_ROOT']??'n/a' ?>' | DIR='<?= __DIR__ ?>' -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
