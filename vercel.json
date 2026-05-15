@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.7.2"
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "/index.php" },
+    { "src": "/about", "dest": "/about.php" },
+    { "src": "/collections", "dest": "/collections.php" },
+    { "src": "/services", "dest": "/services.php" },
+    { "src": "/contact", "dest": "/contact.php" },
+    { "src": "/gallery", "dest": "/gallery.php" },
+    { "src": "/events", "dest": "/events.php" },
+    { "src": "/facilities", "dest": "/facilities.php" },
+    { "src": "/staff", "dest": "/staff.php" }
+  ]
+}
