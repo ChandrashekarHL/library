@@ -2,8 +2,8 @@
 $pageTitle  = 'Contact — Ask Librarian & Feedback';
 $pageDescription = 'Submit your library queries, book recommendations, and feedback to [College Name] Library. Our librarian will respond within 24 hours.';
 $activePage = 'contact';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 <style>
 .contact-hero { background: var(--grad-hero); }
@@ -315,4 +315,4 @@ require_once 'includes/navbar.php';
   </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

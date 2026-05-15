@@ -3,8 +3,8 @@ $pageTitle       = 'Home — Smart Digital Library';
 $pageDescription = 'Welcome to [College Name] Digital Library — Your gateway to books, journals, e-resources, and modern academic library services.';
 $pageClass       = '';
 $activePage      = 'home';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 
 <!-- ══════════════════════════════════════
@@ -362,4 +362,4 @@ require_once 'includes/navbar.php';
   </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

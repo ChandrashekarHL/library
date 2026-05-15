@@ -2,8 +2,8 @@
 $pageTitle  = 'Events & Activities';
 $pageDescription = 'Stay updated with [College Name] Library events, workshops, exhibitions, and activities throughout the academic year.';
 $activePage = 'events';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 
 <!-- Page Hero -->
@@ -123,4 +123,4 @@ require_once 'includes/navbar.php';
   </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

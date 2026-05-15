@@ -1,0 +1,16 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect root to api/index.php
+RewriteRule ^$ api/index.php [L]
+
+# Redirect .php pages to api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z]+)\.php$ api/$1.php [L]
+
+# Allow direct api/ access
+RewriteRule ^api/ - [L]
+
+# Allow static assets
+RewriteRule ^(css|js|images)/ - [L]

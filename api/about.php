@@ -3,8 +3,8 @@ $pageTitle       = 'About — Institution & Library';
 $pageDescription = 'Learn about [College Name], our mission, vision, library history, and academic excellence spanning decades of quality education.';
 $pageClass       = '';
 $activePage      = 'about';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 
 <!-- Page Hero -->
@@ -253,4 +253,4 @@ require_once 'includes/navbar.php';
   </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

@@ -2,8 +2,8 @@
 $pageTitle  = 'Photo Gallery';
 $pageDescription = 'Browse [College Name] Library\'s photo gallery — reading rooms, events, facilities, and campus life.';
 $activePage = 'gallery';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 <link rel="stylesheet" href="/library/css/gallery.css">
 
@@ -107,4 +107,4 @@ require_once 'includes/navbar.php';
 
 <script src="/library/js/gallery.js"></script>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

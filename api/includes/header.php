@@ -4,7 +4,7 @@
  * Variables needed before include:
  *   $pageTitle, $pageDescription, $pageClass, $activePage
  */
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../config.php'; // api/includes/../config.php = api/config.php
 
 if (!isset($pageTitle))       $pageTitle       = 'Digital Library Portal';
 if (!isset($pageDescription)) $pageDescription = 'Smart Digital Library — Government First Grade College.';

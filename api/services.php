@@ -2,8 +2,8 @@
 $pageTitle  = 'Library Services & Digital Resources';
 $pageDescription = 'Explore library services — membership, book lending, OPAC, e-learning, digital resources including NDL, ONOS, SWAYAM, and NPTEL.';
 $activePage = 'services';
-require_once 'includes/header.php';
-require_once 'includes/navbar.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/navbar.php';
 ?>
 
 <!-- Page Hero -->
@@ -179,4 +179,4 @@ require_once 'includes/navbar.php';
   </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
