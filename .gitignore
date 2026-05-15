@@ -1,0 +1,32 @@
+# .gitignore — Smart Digital Library
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# XAMPP / PHP logs
+*.log
+error_log
+
+# Environment
+.env
+.env.local
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
+
+# Build output (if added later)
+/dist/
+/build/
+
+# Uploaded files (keep folder structure, ignore content)
+uploads/*
+!uploads/.gitkeep
