@@ -11,29 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
    NAVBAR
 ───────────────────────────────────────── */
 function initNavbar() {
-  const navbar  = document.getElementById('navbar');
-  const toggle  = document.getElementById('nav-toggle');
-  const menu    = document.getElementById('nav-menu');
-  const overlay = document.getElementById('nav-overlay');
+  const navbar   = document.getElementById('navbar');
+  const toggle   = document.getElementById('hamburger');        // matches navbar.php id="hamburger"
+  const menu     = document.getElementById('nav-menu');         // matches navbar.php id="nav-menu"
+  const overlay  = document.getElementById('nav-overlay');
 
-  if (!navbar || !toggle || !menu) return;
+  if (!navbar) return;
 
-  /* ── Scroll: add .scrolled class ── */
-  const onScroll = () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  };
+  /* ── Scroll: glassmorphism effect ── */
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run immediately
+  onScroll();
+
+  if (!toggle || !menu) return;
 
   /* ── Mobile toggle ── */
   const openMenu = () => {
     menu.classList.add('open');
     toggle.classList.add('open');
-    overlay.classList.add('active');
+    overlay?.classList.add('active');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   };
@@ -41,42 +37,39 @@ function initNavbar() {
   const closeMenu = () => {
     menu.classList.remove('open');
     toggle.classList.remove('open');
-    overlay.classList.remove('active');
+    overlay?.classList.remove('active');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
 
   toggle.addEventListener('click', () => {
-    if (menu.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    menu.classList.contains('open') ? closeMenu() : openMenu();
   });
 
-  overlay.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
 
-  /* ── Mobile Dropdowns ── */
+  /* ── Mobile Dropdowns (class="has-dropdown" in navbar.php) ── */
   const dropdownItems = menu.querySelectorAll('.has-dropdown');
   dropdownItems.forEach(item => {
     const link = item.querySelector('.nav-link');
+    if (!link) return;
     link.addEventListener('click', (e) => {
       if (window.innerWidth <= 1024) {
         e.preventDefault();
         const isOpen = item.classList.contains('open');
-        // Close all
-        dropdownItems.forEach(d => d.classList.remove('open'));
+        dropdownItems.forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.nav-link')?.setAttribute('aria-expanded', 'false');
+        });
         if (!isOpen) {
           item.classList.add('open');
           link.setAttribute('aria-expanded', 'true');
-        } else {
-          link.setAttribute('aria-expanded', 'false');
         }
       }
     });
   });
 
-  /* ── Close menu on resize ── */
+  /* ── Resize / keyboard ── */
   window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
       closeMenu();
@@ -84,17 +77,8 @@ function initNavbar() {
     }
   });
 
-  /* ── Close menu on nav link click (non-dropdown) ── */
-  menu.querySelectorAll('.nav-link:not(.has-dropdown > .nav-link)').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  /* ── Keyboard navigation ── */
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menu.classList.contains('open')) {
-      closeMenu();
-      toggle.focus();
-    }
+    if (e.key === 'Escape') closeMenu();
   });
 }
 
@@ -102,74 +86,37 @@ function initNavbar() {
    ACCESSIBILITY BAR
 ───────────────────────────────────────── */
 function initAccessibilityBar() {
-  // Font size control
   const fontSizes = ['font-sm', 'font-lg', 'font-xl'];
-  const fontBtns  = {
-    decrease : document.getElementById('font-decrease'),
-    reset    : document.getElementById('font-reset'),
-    increase : document.getElementById('font-increase'),
-  };
+  let currentIdx  = -1;
 
-  let currentFontIndex = -1; // -1 = default
-
-  const applyFont = (index) => {
-    // Remove all font classes
+  const applyFont = (idx) => {
     document.body.classList.remove(...fontSizes);
-    if (index >= 0 && index < fontSizes.length) {
-      document.body.classList.add(fontSizes[index]);
-    }
-    currentFontIndex = index;
-    // Save
-    try { localStorage.setItem('lib-font-size', index); } catch(e) {}
+    if (idx >= 0 && idx < fontSizes.length) document.body.classList.add(fontSizes[idx]);
+    currentIdx = idx;
+    try { localStorage.setItem('lib-font-size', idx); } catch(e) {}
   };
 
-  fontBtns.decrease?.addEventListener('click', () => {
-    applyFont(Math.max(-1, currentFontIndex - 1));
-  });
-  fontBtns.reset?.addEventListener('click', () => {
-    applyFont(-1);
-  });
-  fontBtns.increase?.addEventListener('click', () => {
-    applyFont(Math.min(fontSizes.length - 1, currentFontIndex + 1));
-  });
+  document.getElementById('font-decrease')?.addEventListener('click', () => applyFont(Math.max(-1, currentIdx - 1)));
+  document.getElementById('font-reset')   ?.addEventListener('click', () => applyFont(-1));
+  document.getElementById('font-increase')?.addEventListener('click', () => applyFont(Math.min(2, currentIdx + 1)));
 
-  // Restore saved font size
   try {
     const saved = parseInt(localStorage.getItem('lib-font-size') ?? '-1');
     if (!isNaN(saved)) applyFont(saved);
   } catch(e) {}
 
-  // ── Contrast Mode ──
+  /* Contrast */
   const contrastBtn = document.getElementById('contrast-toggle');
-
-  const toggleContrast = (on) => {
-    document.body.classList.toggle('contrast-mode', on);
-    contrastBtn?.classList.toggle('active', on);
-    try { localStorage.setItem('lib-contrast', on ? '1' : '0'); } catch(e) {}
-  };
-
   contrastBtn?.addEventListener('click', () => {
-    toggleContrast(!document.body.classList.contains('contrast-mode'));
+    const on = !document.body.classList.contains('contrast-mode');
+    document.body.classList.toggle('contrast-mode', on);
+    contrastBtn.classList.toggle('active', on);
+    try { localStorage.setItem('lib-contrast', on ? '1' : '0'); } catch(e) {}
   });
-
-  // Restore saved contrast
   try {
-    if (localStorage.getItem('lib-contrast') === '1') toggleContrast(true);
+    if (localStorage.getItem('lib-contrast') === '1') {
+      document.body.classList.add('contrast-mode');
+      document.getElementById('contrast-toggle')?.classList.add('active');
+    }
   } catch(e) {}
-
-  // ── Screen Reader button ──
-  const srBtn = document.getElementById('screen-reader-btn');
-  srBtn?.addEventListener('click', () => {
-    // Visual feedback — in production this would trigger an SR-compatible mode
-    srBtn.textContent = '✓ SR Mode';
-    srBtn.classList.add('active');
-    // Announce to actual screen readers
-    const announcer = document.createElement('div');
-    announcer.setAttribute('aria-live', 'polite');
-    announcer.setAttribute('aria-atomic', 'true');
-    announcer.className = 'sr-only';
-    announcer.textContent = 'Screen reader mode activated. All interactive elements are keyboard accessible.';
-    document.body.appendChild(announcer);
-    setTimeout(() => announcer.remove(), 3000);
-  });
 }
