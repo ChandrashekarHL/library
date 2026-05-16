@@ -3,13 +3,31 @@
    ============================================================ */
 
 .footer {
+  position: relative;
   background-color: var(--clr-dark);
   color: var(--clr-muted-light);
   padding: var(--sp-4xl) 0 0;
-  border-top: 1px solid var(--clr-dark-light);
+  border-top: 4px double var(--clr-primary); /* Institutional double border */
+  overflow: hidden;
+}
+
+/* Background watermark */
+.footer::before {
+  content: '\f19c'; /* fa-university */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  font-size: 40vw;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .footer-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: var(--sp-2xl);
@@ -31,15 +49,15 @@
   margin-bottom: var(--sp-sm);
 }
 .footer-logo__icon {
-  width: 48px;
-  height: 48px;
-  background: var(--clr-primary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  color: var(--clr-white);
-  border-radius: 0;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding-right: var(--sp-sm);
 }
 .footer-logo__text {
   display: flex;
@@ -53,7 +71,7 @@
   color: var(--clr-white);
 }
 .footer-logo__sub {
-  font-family: var(--font-body);
+  font-family: var(--font-accent);
   font-size: 0.65rem;
   color: var(--clr-muted);
   letter-spacing: 0.1em;
@@ -91,12 +109,13 @@
 
 /* ── Links Columns ── */
 .footer-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: var(--fw-medium);
-  color: var(--clr-white);
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: var(--fw-semi);
+  color: #B4905F; /* Refined brass accent */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-bottom: var(--sp-lg);
-  letter-spacing: 0.02em;
 }
 
 .footer-links {
@@ -127,13 +146,15 @@
   font-size: 0.9rem;
 }
 .contact-item i {
-  color: var(--clr-accent);
+  color: var(--clr-primary);
   margin-top: 4px;
 }
 
 /* ── Bottom Bar ── */
 .footer-bottom {
-  border-top: 1px solid var(--clr-dark-light);
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255,255,255,0.05);
   padding: var(--sp-lg) 0;
   display: flex;
   align-items: center;
