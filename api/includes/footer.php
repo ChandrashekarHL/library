@@ -141,6 +141,9 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
 <script src="<?= BASE ?>/js/animations.js"></script>
 <script src="<?= BASE ?>/js/forms.js"></script>
 
+<!-- Smooth Scrolling (Lenis) -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous" defer></script>
+
 <!-- GSAP optional (parallax enhancement only) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>

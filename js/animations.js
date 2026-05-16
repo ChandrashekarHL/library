@@ -103,20 +103,6 @@ window.addEventListener('load', function initGSAPLayer() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Orb parallax (decorative only)
-  document.querySelectorAll('.hero__orb').forEach((orb, i) => {
-    gsap.to(orb, {
-      yPercent: -25 * (i + 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 2,
-      }
-    });
-  });
-
   // Section divider scale animations
   document.querySelectorAll('.divider').forEach(el => {
     gsap.from(el, {

@@ -5,10 +5,38 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   hideLoader();
+  initLenis();
   initBackToTop();
   initModalHandlers();
   initCountersNative();  // Native counter fallback (no GSAP needed)
 });
+
+/* ─────────────────────────────────────────
+   LENIS SMOOTH SCROLL (Editorial Premium Feel)
+───────────────────────────────────────── */
+function initLenis() {
+  if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth ease out
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Make it available globally if GSAP needs it
+    window.lenis = lenis;
+  }
+}
 
 /* ─────────────────────────────────────────
    PAGE LOADER — hide fast

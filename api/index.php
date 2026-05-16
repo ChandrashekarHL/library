@@ -11,99 +11,52 @@ require_once __DIR__ . '/includes/navbar.php';
      HERO SECTION
 ════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="Hero section">
-  <div class="hero__bg">
-    <div class="hero__bg-image" aria-hidden="true"></div>
-    <div class="hero__bg-gradient" aria-hidden="true"></div>
-    <div class="hero__bg-mesh" aria-hidden="true"></div>
-    <div class="hero__grid" aria-hidden="true"></div>
-    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-    <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
-  </div>
-
-  <div class="hero__content">
-    <div class="container">
-
-      <!-- Left: Text -->
-      <div class="hero__text">
-        <div class="hero__badge" role="note">
-          <i class="fas fa-star"></i>
-          Government First Grade College Library
-        </div>
-
-        <h1 class="hero__title">
-          Your Gateway to<br>
-          <span class="highlight">Infinite Knowledge</span>
-        </h1>
-
-        <p class="hero__subtitle">
-          A next-generation digital library empowering students, faculty, and researchers with premium academic resources, e-learning platforms, and modern library services.
-        </p>
-
-        <div class="hero__actions">
-          <a href="/library/collections.php" class="btn btn--primary">
-            <i class="fas fa-search"></i> Explore Collections
-          </a>
-          <a href="/library/services.php#opac" class="btn btn--outline-white">
-            <i class="fas fa-globe"></i> Access Web OPAC
-          </a>
-        </div>
-
-        <div class="hero__quick">
-          <span class="hero__quick-label">Quick Access:</span>
-          <div class="hero__quick-links">
-            <a href="/library/services.php#ndl" class="hero__quick-link"><i class="fas fa-book-open"></i> NDL</a>
-            <a href="/library/services.php#swayam" class="hero__quick-link"><i class="fas fa-play-circle"></i> SWAYAM</a>
-            <a href="/library/services.php#nptel" class="hero__quick-link"><i class="fas fa-video"></i> NPTEL</a>
-            <a href="/library/services.php#onos" class="hero__quick-link"><i class="fas fa-newspaper"></i> ONOS</a>
-            <a href="/library/contact.php" class="hero__quick-link"><i class="fas fa-headset"></i> Ask Librarian</a>
-          </div>
-        </div>
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="hero__text">
+      <div class="hero__badge" role="note" data-reveal="fade">
+        Government First Grade College
       </div>
 
-      <!-- Right: Visual Cards -->
-      <div class="hero__visual" aria-hidden="true">
+      <h1 class="hero__title" data-reveal="up" data-delay="0.1">
+        Your Gateway to<br>
+        <i>Infinite Knowledge</i>
+      </h1>
 
-        <div class="hero-card hero-card--main">
-          <div class="hero-card__icon">📚</div>
-          <div class="hero-card__title">[College Name] Digital Library</div>
-          <div class="hero-card__sub">Government First Grade College</div>
-          <div style="margin-top:1rem; height:4px; background:linear-gradient(90deg,#00acc1,#1a237e); border-radius:99px;"></div>
-        </div>
+      <p class="hero__subtitle" data-reveal="up" data-delay="0.2">
+        A next-generation digital library empowering students, faculty, and researchers with premium academic resources, e-learning platforms, and modern library services.
+      </p>
 
-        <div class="hero-card hero-card--stat hero-card--stat-1">
-          <div class="stat-icon stat-icon--blue"><i class="fas fa-books"></i></div>
-          <div>
-            <div class="stat-num" data-count="25000" data-suffix="+">0</div>
-            <div class="stat-label">Total Books</div>
-          </div>
-        </div>
-
-        <div class="hero-card hero-card--stat hero-card--stat-2">
-          <div class="stat-icon stat-icon--cyan"><i class="fas fa-newspaper"></i></div>
-          <div>
-            <div class="stat-num" data-count="150" data-suffix="+">0</div>
-            <div class="stat-label">Journals</div>
-          </div>
-        </div>
-
-        <div class="hero-card hero-card--stat hero-card--stat-3">
-          <div class="stat-icon stat-icon--green"><i class="fas fa-tablet-screen-button"></i></div>
-          <div>
-            <div class="stat-num" data-count="1000" data-suffix="+">0</div>
-            <div class="stat-label">E-Resources</div>
-          </div>
-        </div>
-
+      <div class="hero__actions" data-reveal="up" data-delay="0.3">
+        <a href="/library/collections.php" class="btn btn--primary">
+          Explore Collections
+        </a>
+        <a href="/library/services.php#opac" class="btn btn--outline">
+          Access Web OPAC
+        </a>
       </div>
 
+      <div class="hero__quick" data-reveal="fade" data-delay="0.4">
+        <span class="hero__quick-label">Digital Access</span>
+        <div class="hero__quick-links">
+          <a href="/library/services.php#ndl" class="hero__quick-link">NDL India</a>
+          <a href="/library/services.php#swayam" class="hero__quick-link">SWAYAM</a>
+          <a href="/library/services.php#nptel" class="hero__quick-link">NPTEL</a>
+          <a href="/library/services.php#onos" class="hero__quick-link">ONOS</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="hero__scroll" aria-hidden="true">
-    <div class="scroll-mouse"></div>
-    <span>Scroll</span>
+    <!-- Right: Visual -->
+    <div class="hero__visual" aria-hidden="true" data-reveal="fade" data-delay="0.2">
+      <div class="hero__image-wrapper">
+        <img src="<?= BASE ?>/images/hero-bg.jpg" alt="Library Archive Reading Room">
+      </div>
+      <div class="hero__image-caption" data-reveal="up" data-delay="0.5">
+        <div class="caption-title">Main Reading Hall</div>
+        <div class="caption-text">EST. 1990 — Central Campus</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -113,24 +66,20 @@ require_once __DIR__ . '/includes/navbar.php';
 <section class="counters" aria-label="Library statistics">
   <div class="container">
     <div class="counter-item" data-reveal="up" data-delay="0">
-      <i class="fas fa-book-open counter-icon" aria-hidden="true"></i>
-      <span class="counter-number" data-count="25000" data-suffix="+">0+</span>
-      <span class="counter-label">Print Books</span>
+      <span class="counter-number" data-count="25000" data-suffix="+">0<span class="counter-suffix">+</span></span>
+      <span class="counter-label">Print Volumes</span>
     </div>
     <div class="counter-item" data-reveal="up" data-delay="0.1">
-      <i class="fas fa-newspaper counter-icon" aria-hidden="true"></i>
-      <span class="counter-number" data-count="150" data-suffix="+">0+</span>
-      <span class="counter-label">Journals & Periodicals</span>
+      <span class="counter-number" data-count="150" data-suffix="+">0<span class="counter-suffix">+</span></span>
+      <span class="counter-label">Academic Journals</span>
     </div>
     <div class="counter-item" data-reveal="up" data-delay="0.2">
-      <i class="fas fa-globe counter-icon" aria-hidden="true"></i>
-      <span class="counter-number" data-count="1000" data-suffix="+">0+</span>
-      <span class="counter-label">E-Resources</span>
+      <span class="counter-number" data-count="1000" data-suffix="+">0<span class="counter-suffix">+</span></span>
+      <span class="counter-label">Digital Resources</span>
     </div>
     <div class="counter-item" data-reveal="up" data-delay="0.3">
-      <i class="fas fa-users counter-icon" aria-hidden="true"></i>
-      <span class="counter-number" data-count="5000" data-suffix="+">0+</span>
-      <span class="counter-label">Annual Visitors</span>
+      <span class="counter-number" data-count="5000" data-suffix="+">0<span class="counter-suffix">+</span></span>
+      <span class="counter-label">Annual Scholars</span>
     </div>
   </div>
 </section>

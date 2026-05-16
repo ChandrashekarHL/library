@@ -1,69 +1,68 @@
 /* ============================================================
-   SMART DIGITAL LIBRARY — Design System Variables
-   Government First Grade College Library
+   SMART DIGITAL LIBRARY — Editorial Design System
+   Visual Philosophy: Institutional, Archival, Elegant
    ============================================================ */
 
 :root {
-  /* ── Primary Palette ── */
-  --clr-primary:        #1a237e;
-  --clr-primary-mid:    #283593;
-  --clr-primary-light:  #3949ab;
-  --clr-primary-pale:   #c5cae9;
-  --clr-indigo:         #303f9f;
-
+  /* ── Primary Palette (Archival & Institutional) ── */
+  --clr-primary:        #691A25; /* Deep Crimson/Burgundy */
+  --clr-primary-mid:    #4E131C;
+  --clr-primary-light:  #8B2332;
+  --clr-primary-pale:   #F5E6E8;
+  
   /* ── Accent ── */
-  --clr-accent:         #00acc1;
-  --clr-accent-light:   #00e5ff;
-  --clr-accent-glow:    rgba(0, 172, 193, 0.3);
+  --clr-accent:         #B4905F; /* Muted Gold / Brass */
+  --clr-accent-light:   #C8A573;
+  --clr-accent-pale:    #F8F3EA;
 
-  /* ── Neutrals ── */
-  --clr-white:          #ffffff;
-  --clr-bg:             #f0f4ff;
-  --clr-bg-alt:         #e8eeff;
-  --clr-surface:        #ffffff;
-  --clr-border:         #dde3f4;
+  /* ── Neutrals (Parchment & Paper) ── */
+  --clr-white:          #FFFFFF;
+  --clr-bg:             #F8F7F5; /* Archival Parchment */
+  --clr-bg-alt:         #EFEBE4; /* Warm Gray Paper */
+  --clr-surface:        #FFFFFF; /* Pure White Content Blocks */
+  --clr-border:         #DEDBD4; /* Soft Pencil Border */
 
-  /* ── Dark Shades ── */
-  --clr-dark:           #0d1b3e;
-  --clr-dark-mid:       #1c2a52;
-  --clr-dark-light:     #2e3f6e;
+  /* ── Dark Shades (Charcoal) ── */
+  --clr-dark:           #1C1B1A;
+  --clr-dark-mid:       #2A2826;
+  --clr-dark-light:     #3B3835;
 
   /* ── Text ── */
-  --clr-text:           #1c1c2e;
-  --clr-text-mid:       #3a3a5c;
-  --clr-muted:          #6b7a99;
-  --clr-muted-light:    #9aa3be;
+  --clr-text:           #242220; /* Charcoal Black */
+  --clr-text-mid:       #4A4744; /* Muted Reading Text */
+  --clr-muted:          #7A7570; /* Captions */
+  --clr-muted-light:    #9A958F;
 
-  /* ── Glass Effect ── */
-  --glass-bg:           rgba(255, 255, 255, 0.10);
-  --glass-bg-strong:    rgba(255, 255, 255, 0.18);
-  --glass-border:       rgba(255, 255, 255, 0.25);
-  --glass-shadow:       0 8px 32px rgba(26, 35, 126, 0.15);
+  /* ── Glass Effect (REMOVED - Replaced with solid minimal overlays) ── */
+  --glass-bg:           rgba(255, 255, 255, 0.95);
+  --glass-bg-strong:    rgba(255, 255, 255, 0.98);
+  --glass-border:       rgba(0, 0, 0, 0.05);
+  --glass-shadow:       none;
 
-  /* ── Gradients ── */
-  --grad-primary:       linear-gradient(135deg, #1a237e 0%, #283593 50%, #00acc1 100%);
-  --grad-hero:          linear-gradient(135deg, #0d1b3e 0%, #1a237e 40%, #283593 70%, #00bcd4 100%);
-  --grad-card:          linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
-  --grad-section:       linear-gradient(180deg, #f0f4ff 0%, #e8eeff 100%);
-  --grad-dark-section:  linear-gradient(135deg, #0d1b3e 0%, #1a237e 100%);
+  /* ── Gradients (Muted & Minimal) ── */
+  --grad-primary:       linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-mid) 100%);
+  --grad-hero:          linear-gradient(135deg, #1A1918 0%, #2A2826 100%);
+  --grad-card:          none;
+  --grad-section:       linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-bg-alt) 100%);
+  --grad-dark-section:  var(--grad-hero);
 
-  /* ── Typography ── */
-  --font-heading:       'Poppins', sans-serif;
+  /* ── Typography (Editorial) ── */
+  --font-heading:       'Cormorant Garamond', serif;
   --font-body:          'Inter', sans-serif;
-  --font-accent:        'Outfit', sans-serif;
+  --font-accent:        'Inter', sans-serif;
 
   /* ── Font Sizes ── */
   --fs-xs:   0.75rem;
   --fs-sm:   0.875rem;
-  --fs-base: 1rem;
-  --fs-md:   1.125rem;
-  --fs-lg:   1.25rem;
-  --fs-xl:   1.5rem;
-  --fs-2xl:  1.875rem;
-  --fs-3xl:  2.25rem;
-  --fs-4xl:  3rem;
-  --fs-5xl:  3.75rem;
-  --fs-hero: clamp(2.5rem, 6vw, 5rem);
+  --fs-base: 1.05rem; /* Slightly larger for editorial reading */
+  --fs-md:   1.2rem;
+  --fs-lg:   1.5rem;
+  --fs-xl:   1.875rem;
+  --fs-2xl:  2.25rem;
+  --fs-3xl:  3rem;
+  --fs-4xl:  3.75rem;
+  --fs-5xl:  4.5rem;
+  --fs-hero: clamp(3rem, 7vw, 5.5rem);
 
   /* ── Font Weights ── */
   --fw-light:   300;
@@ -71,39 +70,38 @@
   --fw-medium:  500;
   --fw-semi:    600;
   --fw-bold:    700;
-  --fw-extra:   800;
 
-  /* ── Spacing ── */
+  /* ── Spacing (Generous Whitespace) ── */
   --sp-xs:  0.25rem;
   --sp-sm:  0.5rem;
-  --sp-md:  1rem;
-  --sp-lg:  1.5rem;
-  --sp-xl:  2rem;
-  --sp-2xl: 3rem;
-  --sp-3xl: 4rem;
-  --sp-4xl: 6rem;
-  --sp-5xl: 8rem;
+  --sp-md:  1.2rem;
+  --sp-lg:  2rem;
+  --sp-xl:  3rem;
+  --sp-2xl: 4.5rem;
+  --sp-3xl: 6rem;
+  --sp-4xl: 8rem;
+  --sp-5xl: 10rem;
 
-  /* ── Border Radius ── */
-  --radius-sm:   6px;
-  --radius-md:   12px;
-  --radius-lg:   20px;
-  --radius-xl:   28px;
-  --radius-full: 9999px;
+  /* ── Border Radius (Sharp & Institutional) ── */
+  --radius-sm:   0px;
+  --radius-md:   2px;
+  --radius-lg:   2px;
+  --radius-xl:   2px;
+  --radius-full: 999px; /* Only for specific pills */
 
-  /* ── Shadows ── */
-  --shadow-sm:   0 2px 8px rgba(26, 35, 126, 0.08);
-  --shadow-md:   0 4px 20px rgba(26, 35, 126, 0.12);
-  --shadow-lg:   0 8px 40px rgba(26, 35, 126, 0.18);
-  --shadow-xl:   0 16px 64px rgba(26, 35, 126, 0.22);
-  --shadow-card: 0 4px 24px rgba(26, 35, 126, 0.10);
-  --shadow-glow: 0 0 40px rgba(0, 172, 193, 0.25);
+  /* ── Shadows (Very Soft, Minimal) ── */
+  --shadow-sm:   0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-lg:   0 12px 32px rgba(0, 0, 0, 0.06);
+  --shadow-xl:   0 24px 64px rgba(0, 0, 0, 0.08);
+  --shadow-card: var(--shadow-sm);
+  --shadow-glow: none;
 
   /* ── Transitions ── */
-  --transition-fast:   0.2s ease;
-  --transition-base:   0.3s ease;
-  --transition-slow:   0.5s ease;
-  --transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast:   0.3s ease-out;
+  --transition-base:   0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow:   0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-spring: 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Removed bounce */
 
   /* ── Z-index ── */
   --z-base:    1;
@@ -113,20 +111,19 @@
   --z-tooltip: 300;
 
   /* ── Navbar ── */
-  --navbar-height: 72px;
-  --access-bar-height: 40px;
+  --navbar-height: 80px;
+  --access-bar-height: 36px;
 
   /* ── Section Padding ── */
-  --section-py: clamp(3rem, 8vw, 6rem);
+  --section-py: clamp(4rem, 10vw, 8rem);
 }
 
 /* ── Contrast Mode Override ── */
 body.contrast-mode {
   --clr-bg:       #000000;
   --clr-bg-alt:   #111111;
-  --clr-surface:  #1a1a1a;
-  --clr-text:     #ffffff;
-  --clr-muted:    #cccccc;
+  --clr-surface:  #1A1A1A;
+  --clr-text:     #FFFFFF;
+  --clr-muted:    #BBBBBB;
   --clr-border:   #444444;
-  --glass-bg:     rgba(0, 0, 0, 0.6);
 }
