@@ -1,6 +1,6 @@
 <?php
 $pageTitle  = 'Contact — Ask Librarian & Feedback';
-$pageDescription = 'Submit your library queries, book recommendations, and feedback to [College Name] Library. Our librarian will respond within 24 hours.';
+$pageDescription = 'Submit your library queries, book recommendations, and feedback to GFGC Kadugudi Library. Our librarian will respond within 24 hours.';
 $activePage = 'contact';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';
@@ -40,7 +40,7 @@ require_once __DIR__ . '/includes/navbar.php';
     <div class="grid-4" data-stagger="0.08">
       <div class="contact-info-card">
         <i class="fas fa-map-marker-alt"></i>
-        <div><h4>Address</h4><p>[College Name], [City], [State]</p></div>
+        <div><h4>Address</h4><p>GFGC Kadugudi, [City], [State]</p></div>
       </div>
       <div class="contact-info-card">
         <i class="fas fa-phone-alt"></i>

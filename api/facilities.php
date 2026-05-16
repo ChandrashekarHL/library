@@ -1,6 +1,6 @@
 <?php
 $pageTitle  = 'Library Facilities';
-$pageDescription = 'Explore [College Name] Library facilities — reading rooms, computer lab, digital zone, virtual tour, and interactive floor plan.';
+$pageDescription = 'Explore GFGC Kadugudi Library facilities — reading rooms, computer lab, digital zone, virtual tour, and interactive floor plan.';
 $activePage = 'facilities';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';

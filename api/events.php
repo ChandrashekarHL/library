@@ -1,6 +1,6 @@
 <?php
 $pageTitle  = 'Events & Activities';
-$pageDescription = 'Stay updated with [College Name] Library events, workshops, exhibitions, and activities throughout the academic year.';
+$pageDescription = 'Stay updated with GFGC Kadugudi Library events, workshops, exhibitions, and activities throughout the academic year.';
 $activePage = 'events';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';

@@ -1,6 +1,6 @@
 <?php
 $pageTitle  = 'Photo Gallery';
-$pageDescription = 'Browse [College Name] Library\'s photo gallery — reading rooms, events, facilities, and campus life.';
+$pageDescription = 'Browse GFGC Kadugudi Library\'s photo gallery — reading rooms, events, facilities, and campus life.';
 $activePage = 'gallery';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';

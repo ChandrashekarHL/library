@@ -1,6 +1,6 @@
 <?php
 $pageTitle       = 'About — Institution & Library';
-$pageDescription = 'Learn about [College Name], our mission, vision, library history, and academic excellence spanning decades of quality education.';
+$pageDescription = 'Learn about GFGC Kadugudi, our mission, vision, library history, and academic excellence spanning decades of quality education.';
 $pageClass       = '';
 $activePage      = 'about';
 require_once __DIR__ . '/includes/header.php';
@@ -30,9 +30,9 @@ require_once __DIR__ . '/includes/navbar.php';
     <div class="split-section">
       <div>
         <div class="section-label" data-reveal="fade">The Institution</div>
-        <h2 data-reveal="up">About [College Name]</h2>
+        <h2 data-reveal="up">About GFGC Kadugudi</h2>
         <p class="mt-md" data-reveal="up" data-delay="0.1">
-          [College Name] is a Government First Grade College established under the aegis of the Department of Collegiate Education, Government of [State]. Affiliated to [University Name], the college has been a beacon of quality education for students across the region.
+          GFGC Kadugudi is a Government First Grade College established under the aegis of the Department of Collegiate Education, Government of [State]. Affiliated to [University Name], the college has been a beacon of quality education for students across the region.
         </p>
         <p class="mt-md" data-reveal="up" data-delay="0.15">
           The college offers undergraduate and postgraduate programmes across the Faculties of Arts, Science, and Commerce, with a strong emphasis on holistic student development, research culture, and community service.
@@ -114,7 +114,7 @@ require_once __DIR__ . '/includes/navbar.php';
       <div>
         <h3 data-reveal="up">A Centre of Academic Excellence</h3>
         <p class="mt-md" data-reveal="up" data-delay="0.1">
-          The [College Name] Library is one of the largest academic libraries in the region, spread across a dedicated building with modern infrastructure designed to support the academic needs of all students and faculty.
+          The GFGC Kadugudi Library is one of the largest academic libraries in the region, spread across a dedicated building with modern infrastructure designed to support the academic needs of all students and faculty.
         </p>
         <p class="mt-md" data-reveal="up" data-delay="0.15">
           The library houses an extensive collection of textbooks, reference books, periodicals, theses, and digital resources. It subscribes to major national databases and provides access to platforms like NDL India, ONOS, SWAYAM, and NPTEL.

@@ -74,7 +74,7 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
     <!-- Bottom Bar -->
     <div class="footer-bottom">
       <div class="footer-copyright">
-        &copy; <?= date('Y') ?> [College Name] Library. All rights reserved.
+        &copy; <?= date('Y') ?> GFGC Kadugudi Library. All rights reserved.
       </div>
       <div class="footer-legal">
         <a href="<?= BASE ?>/privacy.php">Privacy Policy</a>

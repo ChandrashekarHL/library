@@ -1,6 +1,6 @@
 <?php
 $pageTitle  = 'Library Staff';
-$pageDescription = 'Meet the dedicated library team at [College Name] — our librarians and support staff committed to serving you.';
+$pageDescription = 'Meet the dedicated library team at GFGC Kadugudi — our librarians and support staff committed to serving you.';
 $activePage = 'about';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';

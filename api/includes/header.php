@@ -19,14 +19,14 @@ if (!isset($activePage))      $activePage      = '';
   <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
   <meta name="keywords" content="digital library, government college library, OPAC, e-resources, NDL, ONOS, academic library">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="[College Name] Library">
+  <meta name="author" content="GFGC Kadugudi Library">
 
   <!-- Open Graph -->
-  <meta property="og:title"       content="<?= htmlspecialchars($pageTitle) ?> | [College Name] Library">
+  <meta property="og:title"       content="<?= htmlspecialchars($pageTitle) ?> | GFGC Kadugudi Library">
   <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
   <meta property="og:type"        content="website">
 
-  <title><?= htmlspecialchars($pageTitle) ?> | [College Name] Digital Library</title>
+  <title><?= htmlspecialchars($pageTitle) ?> | GFGC Kadugudi Digital Library</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="<?= BASE ?>/images/favicon.svg">

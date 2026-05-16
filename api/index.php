@@ -14,7 +14,7 @@ require_once __DIR__ . '/includes/navbar.php';
   <div class="hero-bg-pattern"></div>
   <div class="container hero__inner">
     <div class="hero__badge" data-reveal="fade">
-      <span class="pulse-dot"></span> [College Name] Digital Library
+      <span class="pulse-dot"></span> GFGC Kadugudi Library
     </div>
     
     <h1 class="hero__title" data-reveal="up" data-delay="0.1">
@@ -22,7 +22,7 @@ require_once __DIR__ . '/includes/navbar.php';
     </h1>
     
     <p class="hero__subtitle" data-reveal="up" data-delay="0.2">
-      Your centralized access point for books, journals, databases, and study tools to power your research and learning.
+      Government First Grade College, Kadugudi started in the year 2009 with the ambition of upgrading the Education level of the underprivileged class of people. The library is where students can get the opportunity to read and get knowledge through reading materials that they cannot get in the classroom.
     </p>
 
     <!-- Massive OPAC Search Bar -->

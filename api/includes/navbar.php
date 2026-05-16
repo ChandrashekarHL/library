@@ -33,12 +33,12 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
       </button>
 
       <!-- Logo -->
-      <a href="<?= BASE ?>/" class="nav-logo" aria-label="[College Name] Library Home">
+      <a href="<?= BASE ?>/" class="nav-logo" aria-label="GFGC Kadugudi Library Home">
         <div class="nav-logo__icon" aria-hidden="true">
           <i class="fas fa-book-open-reader"></i>
         </div>
         <div class="nav-logo__text">
-          <span class="nav-logo__title">College Library</span>
+          <span class="nav-logo__title">GFGC Kadugudi</span>
         </div>
       </a>
 

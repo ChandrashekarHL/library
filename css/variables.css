@@ -6,23 +6,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* ── Primary Palette (Slate Navy) ── */
-  --clr-primary:        #0F172A; /* Slate 900 - Deep, professional */
-  --clr-primary-mid:    #1E293B; /* Slate 800 */
-  --clr-primary-light:  #334155; /* Slate 700 */
-  --clr-primary-pale:   #F1F5F9; /* Slate 100 */
+  /* ── Primary Palette (Maroon/Crimson) ── */
+  --clr-primary:        #691A25; /* Deep Maroon */
+  --clr-primary-mid:    #7A1F2B;
+  --clr-primary-light:  #8A2533;
+  --clr-primary-pale:   #F8F3F4; /* Very light pinkish-gray */
   
-  /* ── Accent Palette (Vibrant Teal) ── */
-  --clr-accent:         #0D9488; /* Teal 600 - High contrast, accessible */
-  --clr-accent-light:   #14B8A6; /* Teal 500 */
-  --clr-accent-pale:    #F0FDFA; /* Teal 50 */
+  /* ── Accent Palette (Gold/Brass or secondary Maroon) ── */
+  --clr-accent:         #B4905F; /* Brass accent from original */
+  --clr-accent-light:   #C8A87C;
+  --clr-accent-pale:    #FDFBF7;
 
   /* ── Neutrals & Backgrounds ── */
   --clr-white:          #FFFFFF;
-  --clr-bg:             #F8FAFC; /* Slate 50 - Very clean, modern gray */
-  --clr-bg-alt:         #F1F5F9; /* Slate 100 */
-  --clr-surface:        #FFFFFF; /* Pure White Content Blocks */
-  --clr-border:         #E2E8F0; /* Slate 200 */
+  --clr-bg:             #FAFAFA; /* Warm off-white */
+  --clr-bg-alt:         #F5F5F5;
+  --clr-surface:        #FFFFFF;
+  --clr-border:         #E5E5E5;
 
   /* ── Dark Shades ── */
   --clr-dark:           #020617; /* Slate 950 */

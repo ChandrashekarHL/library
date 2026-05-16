@@ -1,6 +1,6 @@
 <?php
 $pageTitle       = 'Library Collections';
-$pageDescription = 'Explore [College Name] Library collections — print books, digital resources, journals, newspapers, periodicals, and e-resources.';
+$pageDescription = 'Explore GFGC Kadugudi Library collections — print books, digital resources, journals, newspapers, periodicals, and e-resources.';
 $activePage      = 'collections';
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';
