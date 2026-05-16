@@ -28,7 +28,7 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
       <!-- Brand Column -->
       <div class="footer-brand">
         <a href="<?= BASE ?>/" class="nav-logo">
-          <div class="nav-logo__icon">📚</div>
+          <div class="nav-logo__icon"><i class="fas fa-landmark"></i></div>
           <div class="nav-logo__text">
             <span class="nav-logo__title">[College Name]</span>
             <span class="nav-logo__sub">Digital Library</span>

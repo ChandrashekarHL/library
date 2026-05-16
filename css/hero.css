@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   background-color: var(--clr-bg);
-  padding-top: calc(var(--navbar-height) + var(--access-bar-height) + var(--sp-2xl));
+  padding-top: calc(var(--navbar-height) + var(--access-bar-height) + var(--sp-lg));
   padding-bottom: var(--sp-4xl);
   overflow: hidden;
   border-bottom: 1px solid var(--clr-border);

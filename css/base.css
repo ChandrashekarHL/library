@@ -298,3 +298,47 @@ body.font-xl  { font-size: 20px; }
   .section { padding: 3rem 0; }
   .btn { padding: 0.75rem 1.5rem; }
 }
+
+/* ── Modal (Success Banner) ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-box {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  padding: var(--sp-2xl);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  position: relative;
+}
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: var(--clr-muted);
+}
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: var(--sp-md);
+}

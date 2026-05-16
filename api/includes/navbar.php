@@ -32,7 +32,7 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
 
       <!-- Logo -->
       <a href="<?= BASE ?>/" class="nav-logo" aria-label="[College Name] Digital Library Home">
-        <div class="nav-logo__icon" aria-hidden="true">📚</div>
+        <div class="nav-logo__icon" aria-hidden="true"><i class="fas fa-landmark"></i></div>
         <div class="nav-logo__text">
           <span class="nav-logo__title">[College Name]</span>
           <span class="nav-logo__sub">Digital Library</span>
