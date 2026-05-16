@@ -164,10 +164,10 @@ body.contrast-mode .navbar.scrolled {
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 1.1rem;
+  bottom: 0;
   left: 50%;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--clr-primary);
   transition: all var(--transition-base);
   transform: translateX(-50%);
