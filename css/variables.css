@@ -1,68 +1,68 @@
 /* ============================================================
-   SMART DIGITAL LIBRARY — Editorial Design System
-   Visual Philosophy: Institutional, Archival, Elegant
+   SMART DIGITAL LIBRARY — Modern Grounded Campus Design System
+   Visual Philosophy: Functional, Clean, Human, Accessible
    ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-  /* ── Primary Palette (Archival & Institutional) ── */
-  --clr-primary:        #691A25; /* Deep Crimson/Burgundy */
-  --clr-primary-mid:    #4E131C;
-  --clr-primary-light:  #8B2332;
-  --clr-primary-pale:   #F5E6E8;
+  /* ── Primary Palette (Slate Navy) ── */
+  --clr-primary:        #0F172A; /* Slate 900 - Deep, professional */
+  --clr-primary-mid:    #1E293B; /* Slate 800 */
+  --clr-primary-light:  #334155; /* Slate 700 */
+  --clr-primary-pale:   #F1F5F9; /* Slate 100 */
   
-  /* ── Accent ── */
-  --clr-accent:         #B4905F; /* Muted Gold / Brass */
-  --clr-accent-light:   #C8A573;
-  --clr-accent-pale:    #F8F3EA;
+  /* ── Accent Palette (Vibrant Teal) ── */
+  --clr-accent:         #0D9488; /* Teal 600 - High contrast, accessible */
+  --clr-accent-light:   #14B8A6; /* Teal 500 */
+  --clr-accent-pale:    #F0FDFA; /* Teal 50 */
 
-  /* ── Neutrals (Parchment & Paper) ── */
+  /* ── Neutrals & Backgrounds ── */
   --clr-white:          #FFFFFF;
-  --clr-bg:             #F8F7F5; /* Archival Parchment */
-  --clr-bg-alt:         #EFEBE4; /* Warm Gray Paper */
+  --clr-bg:             #F8FAFC; /* Slate 50 - Very clean, modern gray */
+  --clr-bg-alt:         #F1F5F9; /* Slate 100 */
   --clr-surface:        #FFFFFF; /* Pure White Content Blocks */
-  --clr-border:         #DEDBD4; /* Soft Pencil Border */
+  --clr-border:         #E2E8F0; /* Slate 200 */
 
-  /* ── Dark Shades (Charcoal) ── */
-  --clr-dark:           #1C1B1A;
-  --clr-dark-mid:       #2A2826;
-  --clr-dark-light:     #3B3835;
+  /* ── Dark Shades ── */
+  --clr-dark:           #020617; /* Slate 950 */
+  --clr-dark-mid:       #0F172A;
+  --clr-dark-light:     #1E293B;
 
   /* ── Text ── */
-  --clr-text:           #242220; /* Charcoal Black */
-  --clr-text-mid:       #4A4744; /* Muted Reading Text */
-  --clr-muted:          #7A7570; /* Captions */
-  --clr-muted-light:    #9A958F;
+  --clr-text:           #0F172A; /* Slate 900 */
+  --clr-text-mid:       #475569; /* Slate 600 */
+  --clr-muted:          #64748B; /* Slate 500 */
+  --clr-muted-light:    #94A3B8; /* Slate 400 */
 
-  /* ── Glass Effect (REMOVED - Replaced with solid minimal overlays) ── */
-  --glass-bg:           rgba(255, 255, 255, 0.95);
-  --glass-bg-strong:    rgba(255, 255, 255, 0.98);
-  --glass-border:       rgba(0, 0, 0, 0.05);
-  --glass-shadow:       none;
+  /* ── Glass Effect (Modern Subtle) ── */
+  --glass-bg:           rgba(255, 255, 255, 0.85);
+  --glass-bg-strong:    rgba(255, 255, 255, 0.95);
+  --glass-border:       rgba(255, 255, 255, 0.5);
+  --glass-shadow:       0 8px 32px 0 rgba(31, 38, 135, 0.05);
 
-  /* ── Gradients (Muted & Minimal) ── */
-  --grad-primary:       linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-mid) 100%);
-  --grad-hero:          linear-gradient(135deg, #1A1918 0%, #2A2826 100%);
-  --grad-card:          none;
-  --grad-section:       linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-bg-alt) 100%);
-  --grad-dark-section:  var(--grad-hero);
+  /* ── Gradients ── */
+  --grad-primary:       linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  --grad-hero:          linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+  --grad-accent:        linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
 
-  /* ── Typography (Editorial) ── */
-  --font-heading:       'Cormorant Garamond', serif;
-  --font-body:          'Inter', sans-serif;
-  --font-accent:        'Inter', sans-serif;
+  /* ── Typography (Modern Geometric) ── */
+  --font-heading:       'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-body:          'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-accent:        'Plus Jakarta Sans', 'Inter', sans-serif;
 
   /* ── Font Sizes ── */
   --fs-xs:   0.75rem;
   --fs-sm:   0.875rem;
-  --fs-base: 1.05rem; /* Slightly larger for editorial reading */
-  --fs-md:   1.2rem;
-  --fs-lg:   1.5rem;
-  --fs-xl:   1.875rem;
-  --fs-2xl:  2.25rem;
-  --fs-3xl:  3rem;
-  --fs-4xl:  3.75rem;
-  --fs-5xl:  4.5rem;
-  --fs-hero: clamp(3rem, 7vw, 5.5rem);
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.25rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  1.875rem;
+  --fs-3xl:  2.25rem;
+  --fs-4xl:  3rem;
+  --fs-5xl:  3.75rem;
+  --fs-hero: clamp(2.5rem, 5vw, 4rem);
 
   /* ── Font Weights ── */
   --fw-light:   300;
@@ -71,37 +71,35 @@
   --fw-semi:    600;
   --fw-bold:    700;
 
-  /* ── Spacing (Generous Whitespace) ── */
+  /* ── Spacing ── */
   --sp-xs:  0.25rem;
   --sp-sm:  0.5rem;
-  --sp-md:  1.2rem;
-  --sp-lg:  2rem;
-  --sp-xl:  3rem;
-  --sp-2xl: 4.5rem;
-  --sp-3xl: 6rem;
-  --sp-4xl: 8rem;
-  --sp-5xl: 10rem;
+  --sp-md:  1rem;
+  --sp-lg:  1.5rem;
+  --sp-xl:  2rem;
+  --sp-2xl: 3rem;
+  --sp-3xl: 4rem;
+  --sp-4xl: 6rem;
+  --sp-5xl: 8rem;
 
-  /* ── Border Radius (Sharp & Institutional) ── */
-  --radius-sm:   0px;
-  --radius-md:   2px;
-  --radius-lg:   2px;
-  --radius-xl:   2px;
-  --radius-full: 999px; /* Only for specific pills */
+  /* ── Border Radius (Friendly & Accessible) ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
 
-  /* ── Shadows (Very Soft, Minimal) ── */
-  --shadow-sm:   0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-lg:   0 12px 32px rgba(0, 0, 0, 0.06);
-  --shadow-xl:   0 24px 64px rgba(0, 0, 0, 0.08);
-  --shadow-card: var(--shadow-sm);
-  --shadow-glow: none;
+  /* ── Shadows (Realistic & Soft) ── */
+  --shadow-sm:   0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:   0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg:   0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-xl:   0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  --shadow-card: var(--shadow-md);
 
   /* ── Transitions ── */
-  --transition-fast:   0.3s ease-out;
-  --transition-base:   0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-slow:   0.8s cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-spring: 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Removed bounce */
+  --transition-fast:   0.15s ease-in-out;
+  --transition-base:   0.3s ease-in-out;
+  --transition-slow:   0.5s ease-in-out;
 
   /* ── Z-index ── */
   --z-base:    1;
@@ -111,11 +109,11 @@
   --z-tooltip: 300;
 
   /* ── Navbar ── */
-  --navbar-height: 130px; /* 80px top + 50px bottom */
-  --access-bar-height: 36px;
+  --navbar-height: 72px;
+  --access-bar-height: 32px;
 
   /* ── Section Padding ── */
-  --section-py: clamp(4rem, 10vw, 8rem);
+  --section-py: clamp(4rem, 8vw, 6rem);
 }
 
 /* ── Contrast Mode Override ── */

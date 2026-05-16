@@ -1,6 +1,6 @@
 <?php
 $pageTitle       = 'Home — Smart Digital Library';
-$pageDescription = 'Welcome to [College Name] Digital Library — Your gateway to books, journals, e-resources, and modern academic library services.';
+$pageDescription = 'Access millions of resources, book study rooms, and explore the modern campus library.';
 $pageClass       = '';
 $activePage      = 'home';
 require_once __DIR__ . '/includes/header.php';
@@ -8,53 +8,39 @@ require_once __DIR__ . '/includes/navbar.php';
 ?>
 
 <!-- ══════════════════════════════════════
-     HERO SECTION
+     HERO SECTION (Discovery Search)
 ════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="Hero section">
-  <div class="container">
-    <!-- Left: Text -->
-    <div class="hero__text">
-      <div class="hero__badge" role="note" data-reveal="fade">
-        Government First Grade College
-      </div>
+  <div class="hero-bg-pattern"></div>
+  <div class="container hero__inner">
+    <div class="hero__badge" data-reveal="fade">
+      <span class="pulse-dot"></span> [College Name] Digital Library
+    </div>
+    
+    <h1 class="hero__title" data-reveal="up" data-delay="0.1">
+      Discover millions of <br><span>academic resources.</span>
+    </h1>
+    
+    <p class="hero__subtitle" data-reveal="up" data-delay="0.2">
+      Your centralized access point for books, journals, databases, and study tools to power your research and learning.
+    </p>
 
-      <h1 class="hero__title" data-reveal="up" data-delay="0.1">
-        Your Gateway to<br>
-        <i>Infinite Knowledge</i>
-      </h1>
-
-      <p class="hero__subtitle" data-reveal="up" data-delay="0.2">
-        A next-generation digital library empowering students, faculty, and researchers with premium academic resources, e-learning platforms, and modern library services.
-      </p>
-
-      <div class="hero__actions" data-reveal="up" data-delay="0.3">
-        <a href="/library/collections.php" class="btn btn--primary">
-          Explore Collections
-        </a>
-        <a href="/library/services.php#opac" class="btn btn--outline">
-          Access Web OPAC
-        </a>
-      </div>
-
-      <div class="hero__quick" data-reveal="fade" data-delay="0.4">
-        <span class="hero__quick-label">Digital Access</span>
-        <div class="hero__quick-links">
-          <a href="/library/services.php#ndl" class="hero__quick-link">NDL India</a>
-          <a href="/library/services.php#swayam" class="hero__quick-link">SWAYAM</a>
-          <a href="/library/services.php#nptel" class="hero__quick-link">NPTEL</a>
-          <a href="/library/services.php#onos" class="hero__quick-link">ONOS</a>
-        </div>
-      </div>
+    <!-- Massive OPAC Search Bar -->
+    <div class="hero-search" data-reveal="scale" data-delay="0.3">
+      <form action="/library/services.php" method="GET" class="hero-search__form">
+        <div class="hero-search__icon"><i class="fas fa-search"></i></div>
+        <input type="text" name="q" placeholder="Search books, articles, authors, or keywords..." aria-label="Search catalog" required>
+        <button type="submit" class="btn btn--primary hero-search__btn">Search</button>
+      </form>
     </div>
 
-    <!-- Right: Visual -->
-    <div class="hero__visual" aria-hidden="true" data-reveal="fade" data-delay="0.2">
-      <div class="hero__image-wrapper">
-        <img src="<?= BASE ?>/images/hero-bg.jpg" alt="Library Archive Reading Room">
-      </div>
-      <div class="hero__image-caption" data-reveal="up" data-delay="0.5">
-        <div class="caption-title">Main Reading Hall</div>
-        <div class="caption-text">EST. 1990 — Central Campus</div>
+    <div class="hero__quick" data-reveal="fade" data-delay="0.4">
+      <span class="hero__quick-label">Popular Resources:</span>
+      <div class="hero__quick-links">
+        <a href="/library/services.php#ndl" class="hero__quick-link">NDL India</a>
+        <a href="/library/services.php#swayam" class="hero__quick-link">SWAYAM</a>
+        <a href="/library/services.php#proquest" class="hero__quick-link">ProQuest</a>
+        <a href="/library/services.php#jstor" class="hero__quick-link">JSTOR</a>
       </div>
     </div>
   </div>
@@ -65,61 +51,33 @@ require_once __DIR__ . '/includes/navbar.php';
 ════════════════════════════════════════ -->
 <section class="counters" aria-label="Library statistics">
   <div class="container">
-    <div class="counter-item" data-reveal="up" data-delay="0">
-      <span class="counter-number" data-count="25000" data-suffix="+">0<span class="counter-suffix">+</span></span>
-      <span class="counter-label">Print Volumes</span>
-    </div>
-    <div class="counter-item" data-reveal="up" data-delay="0.1">
-      <span class="counter-number" data-count="150" data-suffix="+">0<span class="counter-suffix">+</span></span>
-      <span class="counter-label">Academic Journals</span>
-    </div>
-    <div class="counter-item" data-reveal="up" data-delay="0.2">
-      <span class="counter-number" data-count="1000" data-suffix="+">0<span class="counter-suffix">+</span></span>
-      <span class="counter-label">Digital Resources</span>
-    </div>
-    <div class="counter-item" data-reveal="up" data-delay="0.3">
-      <span class="counter-number" data-count="5000" data-suffix="+">0<span class="counter-suffix">+</span></span>
-      <span class="counter-label">Annual Scholars</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     ABOUT PREVIEW
-════════════════════════════════════════ -->
-<section class="section" id="about-preview">
-  <div class="container">
-    <div class="split-section">
-      <div>
-        <div class="section-label" data-reveal="fade"><span></span> About Our Library <span></span></div>
-        <h2 data-reveal="up">A Legacy of Knowledge &amp; Innovation</h2>
-        <p class="mt-md" data-reveal="up" data-delay="0.1">
-          Established with a vision to foster academic excellence, [College Name]'s library is a modern knowledge hub equipped with extensive print and digital collections, state-of-the-art reading facilities, and cutting-edge digital services.
-        </p>
-        <p class="mt-md" data-reveal="up" data-delay="0.15">
-          We are committed to supporting the learning, research, and intellectual growth of students, faculty, and the academic community through innovative and accessible library services.
-        </p>
-        <div class="grid-2" style="margin-top:2rem;" data-stagger="0.1">
-          <div class="info-stat">
-            <span class="info-stat__num" data-count="30" data-suffix="+">30+</span>
-            <span class="info-stat__label">Years of Service</span>
-          </div>
-          <div class="info-stat">
-            <span class="info-stat__num" data-count="200" data-suffix="+">200+</span>
-            <span class="info-stat__label">Reading Seats</span>
-          </div>
-        </div>
-        <div class="mt-xl" data-reveal="up" data-delay="0.3">
-          <a href="/library/about.php" class="btn btn--primary">
-            <i class="fas fa-arrow-right"></i> Learn More
-          </a>
+    <div class="counters-grid">
+      <div class="counter-card" data-reveal="up" data-delay="0">
+        <div class="counter-icon"><i class="fas fa-book"></i></div>
+        <div class="counter-data">
+          <span class="counter-number" data-count="25000" data-suffix="+">0</span>
+          <span class="counter-label">Print Volumes</span>
         </div>
       </div>
-      <div class="split-visual" data-reveal="right">
-        <i class="fas fa-university" aria-hidden="true"></i>
-        <div class="split-visual__overlay">
-          <strong>NAAC Accredited</strong>
-          <span>Government First Grade College</span>
+      <div class="counter-card" data-reveal="up" data-delay="0.1">
+        <div class="counter-icon" style="color: #3B82F6; background: #EFF6FF;"><i class="fas fa-database"></i></div>
+        <div class="counter-data">
+          <span class="counter-number" data-count="1000" data-suffix="+">0</span>
+          <span class="counter-label">E-Resources</span>
+        </div>
+      </div>
+      <div class="counter-card" data-reveal="up" data-delay="0.2">
+        <div class="counter-icon" style="color: #F59E0B; background: #FEF3C7;"><i class="fas fa-newspaper"></i></div>
+        <div class="counter-data">
+          <span class="counter-number" data-count="150" data-suffix="+">0</span>
+          <span class="counter-label">Journals</span>
+        </div>
+      </div>
+      <div class="counter-card" data-reveal="up" data-delay="0.3">
+        <div class="counter-icon" style="color: #10B981; background: #D1FAE5;"><i class="fas fa-users"></i></div>
+        <div class="counter-data">
+          <span class="counter-number" data-count="5000" data-suffix="+">0</span>
+          <span class="counter-label">Active Users</span>
         </div>
       </div>
     </div>
@@ -127,63 +85,55 @@ require_once __DIR__ . '/includes/navbar.php';
 </section>
 
 <!-- ══════════════════════════════════════
-     COLLECTIONS PREVIEW
+     BENTO BOX PREVIEW (Collections & Features)
 ════════════════════════════════════════ -->
-<section class="section section--alt" id="collections-preview">
+<section class="section section--alt" id="features">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label" data-reveal="fade">Our Collections</div>
-      <h2 class="section-title" data-reveal="up">Explore Our Rich Library Holdings</h2>
-      <div class="divider" data-reveal="scale"></div>
-      <p class="section-subtitle" data-reveal="up" data-delay="0.2">
-        Thousands of titles spanning all disciplines — print, digital, and beyond.
+    <div class="section-header text-center" style="margin: 0 auto var(--sp-3xl);">
+      <div class="section-label" data-reveal="fade">Library Services</div>
+      <h2 class="section-title" data-reveal="up">Everything you need to succeed.</h2>
+      <p class="section-subtitle" style="margin: 0 auto;" data-reveal="up" data-delay="0.1">
+        A modern environment designed for focus, collaboration, and discovery.
       </p>
     </div>
 
-    <div class="grid-4" data-stagger="0.1">
-      <?php
-      $collections = [
-        ['icon'=>'fa-book',         'title'=>'Print Books',       'badge'=>'25,000+', 'text'=>'General, reference, textbooks across all disciplines.',       'color'=>'#B4905F'],
-        ['icon'=>'fa-laptop-code',  'title'=>'Digital Collection', 'badge'=>'1,000+',  'text'=>'E-books, digital theses, multimedia content.',               'color'=>'#691A25'],
-        ['icon'=>'fa-newspaper',    'title'=>'Journals',           'badge'=>'150+',    'text'=>'National and international research journals.',               'color'=>'#4A4744'],
-        ['icon'=>'fa-scroll',       'title'=>'Archives',           'badge'=>'Rare',    'text'=>'Historical documents, university archives, and rare prints.', 'color'=>'#1C1B1A'],
-      ];
-      foreach ($collections as $c): ?>
-        <div class="collection-card" tabindex="0" role="article">
-          <div class="collection-card__cover" style="background:linear-gradient(135deg,<?=$c['color']?>dd,<?=$c['color']?>88);">
-            <span style="position:relative;z-index:1;font-size:3.5rem;color:white;"><i class="fas <?= $c['icon'] ?>"></i></span>
-          </div>
-          <div class="collection-card__body">
-            <span class="collection-card__badge"><?= $c['badge'] ?></span>
-            <h3 class="collection-card__title"><?= $c['title'] ?></h3>
-            <p class="collection-card__text"><?= $c['text'] ?></p>
-            <div class="collection-card__count">
-              <i class="fas fa-arrow-right"></i>
-              <a href="/library/collections.php" style="color:inherit;text-decoration:none;">Browse Collection</a>
-            </div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
+    <!-- Asymmetrical Bento Grid -->
+    <div class="bento-grid" data-stagger="0.1">
+      
+      <!-- Large Feature Card -->
+      <div class="card bento-card bento-card--large" tabindex="0">
+        <div class="bento-card__icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Digital Access 24/7</h3>
+        <p>Access our massive database of e-books, digital theses, and academic journals from anywhere, on any device.</p>
+        <a href="/library/collections.php#digital" class="btn btn--outline mt-md">Browse E-Resources</a>
+      </div>
 
-<!-- ══════════════════════════════════════
-     CTA BANNER
-════════════════════════════════════════ -->
-<section class="section section--dark" style="padding:4rem 0;">
-  <div class="container text-center" data-reveal="scale">
-    <h2 style="color:white; margin-bottom:1rem;">Have a Query? We're Here to Help!</h2>
-    <p style="color:rgba(255,255,255,0.7); margin-bottom:2rem; max-width:500px; margin-left:auto; margin-right:auto;">
-      Our librarian is ready to assist you with book requests, memberships, research queries, and more.
-    </p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="/library/contact.php" class="btn btn--primary">
-        <i class="fas fa-headset"></i> Ask Librarian
-      </a>
-      <a href="/library/contact.php#recommend" class="btn btn--outline-white">
-        <i class="fas fa-plus-circle"></i> Recommend a Book
-      </a>
+      <!-- Medium Feature Card 1 -->
+      <div class="card bento-card bento-card--medium" tabindex="0" style="background: var(--clr-primary); color: white;">
+        <div class="bento-card__icon" style="color: var(--clr-accent-light);"><i class="fas fa-book-open"></i></div>
+        <h3 style="color: white;">Extensive Print Catalog</h3>
+        <p style="color: rgba(255,255,255,0.8);">Over 25,000 physical volumes spanning all academic disciplines, fully cataloged and searchable.</p>
+      </div>
+
+      <!-- Medium Feature Card 2 -->
+      <div class="card bento-card bento-card--medium" tabindex="0">
+        <div class="bento-card__icon" style="color: #F59E0B; background: #FEF3C7;"><i class="fas fa-door-open"></i></div>
+        <h3>Study Rooms</h3>
+        <p>Book private or group study spaces equipped with modern collaboration tools and high-speed Wi-Fi.</p>
+      </div>
+
+      <!-- Wide Feature Card -->
+      <div class="card bento-card bento-card--wide" tabindex="0">
+        <div class="bento-card__content">
+          <h3>Need research assistance?</h3>
+          <p>Our dedicated librarians are available to help you navigate databases, cite sources, and find the exact materials you need.</p>
+          <a href="/library/contact.php" class="btn btn--primary mt-sm">Chat with a Librarian</a>
+        </div>
+        <div class="bento-card__visual">
+          <i class="fas fa-headset"></i>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
