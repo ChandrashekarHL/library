@@ -111,7 +111,7 @@
   --z-tooltip: 300;
 
   /* ── Navbar ── */
-  --navbar-height: 80px;
+  --navbar-height: 130px; /* 80px top + 50px bottom */
   --access-bar-height: 36px;
 
   /* ── Section Padding ── */

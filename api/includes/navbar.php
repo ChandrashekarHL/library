@@ -2,7 +2,7 @@
 // navbar.php needs $activePage and BASE (from header.php → config.php)
 if (!defined('BASE')) require_once __DIR__ . '/../config.php';
 ?>
-<header class="site-header" role="banner">
+<header class="site-header" id="navbar" role="banner">
 
   <!-- Accessibility Bar -->
   <div class="access-bar" role="toolbar" aria-label="Accessibility options">
@@ -26,9 +26,16 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
     </div>
   </div>
 
-  <!-- Main Navbar -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container navbar__inner">
+  <!-- Main Navbar (Logo & Actions) -->
+  <div class="navbar-top">
+    <div class="container navbar-top__inner">
+      
+      <!-- Hamburger (Mobile Only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
 
       <!-- Logo -->
       <a href="<?= BASE ?>/" class="nav-logo" aria-label="[College Name] Digital Library Home">
@@ -39,7 +46,23 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
         </div>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Actions (Desktop Only) -->
+      <div class="navbar-actions">
+        <div class="nav-search" role="search">
+          <input type="text" placeholder="Search catalog, articles, etc..." aria-label="Search catalog">
+          <button type="button" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="<?= BASE ?>/contact.php" class="btn btn--primary nav-cta <?= ($activePage==='contact') ? 'active':'' ?>">
+          Ask a Librarian
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navigation Links (Bottom Bar) -->
+  <nav class="navbar-bottom" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-bottom__inner">
       <ul class="nav-menu" id="nav-menu" role="menubar">
         <li role="none">
           <a href="<?= BASE ?>/" class="nav-link <?= ($activePage==='home') ? 'active':'' ?>" role="menuitem">Home</a>
@@ -90,19 +113,7 @@ if (!defined('BASE')) require_once __DIR__ . '/../config.php';
           <a href="<?= BASE ?>/gallery.php" class="nav-link <?= ($activePage==='gallery') ? 'active':'' ?>" role="menuitem">Gallery</a>
         </li>
       </ul>
-
-      <!-- CTA -->
-      <a href="<?= BASE ?>/contact.php" class="btn btn--primary nav-cta <?= ($activePage==='contact') ? 'active':'' ?>">
-        <i class="fas fa-headset" aria-hidden="true"></i> Contact
-      </a>
-
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-      </button>
-
     </div>
   </nav>
+
 </header>
